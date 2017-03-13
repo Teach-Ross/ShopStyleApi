@@ -207,6 +207,11 @@ public class HomeController {
         return "db";
 
     }
+
+    @RequestMapping("template")
+    public String displayTemplate(){
+        return "template";
+    }
 /*        try {
             //provides access to by sending requests through http protocol to other http servers
             HttpClient http = HttpClientBuilder.create().build();
