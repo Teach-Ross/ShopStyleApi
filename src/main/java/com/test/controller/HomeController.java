@@ -3,12 +3,17 @@ package com.test.controller;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
+import com.test.model.Templatecollectionentity;
 import org.apache.http.HttpHost;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.util.EntityUtils;
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.springframework.stereotype.Controller;
@@ -16,6 +21,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 
@@ -174,6 +180,32 @@ public class HomeController {
         }
 
         return "result2";
+    }
+
+    @RequestMapping("db")
+    public String dbTest(Model model){
+        Configuration cfg = new Configuration().configure("hibernate.cfg.xml");
+
+        SessionFactory sessionFact = cfg.buildSessionFactory();
+
+        Session test = sessionFact.openSession();
+
+        test.beginTransaction();
+        Criteria c = test.createCriteria(Templatecollectionentity.class);
+
+        ArrayList<Templatecollectionentity> templatelist = (ArrayList<Templatecollectionentity>) c.list();
+        model.addAttribute("list",  templatelist.get(0).getTemplateId());
+        model.addAttribute("list1", templatelist.get(0).getUserId());
+
+
+
+
+
+
+
+
+        return "db";
+
     }
 /*        try {
             //provides access to by sending requests through http protocol to other http servers
