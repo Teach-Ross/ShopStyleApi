@@ -1,15 +1,18 @@
 package com.test.model;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.io.Serializable;
+import javax.persistence.IdClass;
 
-public class TemplatecollectionentityPK implements Serializable {
+@Entity
+@IdClass(TemplateCollectionEntityPK.class)
+public class TemplateCollectionEntity {
     private String templateId;
     private String userId;
 
-    @Column(name = "TemplateId", nullable = false, length = 10)
     @Id
+    @Column(name = "TemplateId", nullable = false, length = 10)
     public String getTemplateId() {
         return templateId;
     }
@@ -18,8 +21,8 @@ public class TemplatecollectionentityPK implements Serializable {
         this.templateId = templateId;
     }
 
-    @Column(name = "UserId", nullable = false, length = 10)
     @Id
+    @Column(name = "UserId", nullable = false, length = 10)
     public String getUserId() {
         return userId;
     }
@@ -33,7 +36,7 @@ public class TemplatecollectionentityPK implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        TemplatecollectionentityPK that = (TemplatecollectionentityPK) o;
+        TemplateCollectionEntity that = (TemplateCollectionEntity) o;
 
         if (templateId != null ? !templateId.equals(that.templateId) : that.templateId != null) return false;
         if (userId != null ? !userId.equals(that.userId) : that.userId != null) return false;

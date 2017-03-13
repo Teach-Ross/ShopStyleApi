@@ -4,13 +4,13 @@
     "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
 
-    <class name="com.test.model.Templatecollectionentity" table="templatecollectionentity" schema="denim_store_db">
-        <composite-id mapped="true" class="com.test.model.TemplatecollectionentityPK">
+    <class name="com.test.model.TemplateCollectionEntity" table="TemplateCollectionEntity" schema="Denim_Store_DB">
+        <composite-id mapped="true" class="com.test.model.TemplateCollectionEntityPK">
             <key-property name="templateId">
-                <column name="TemplateId" sql-type="char(10)" length="10"/>
+                <column name="TemplateId" sql-type="varchar(10)" length="10"/>
             </key-property>
             <key-property name="userId">
-                <column name="UserId" sql-type="char(10)" length="10"/>
+                <column name="UserId" sql-type="varchar(10)" length="10"/>
             </key-property>
         </composite-id>
     </class>

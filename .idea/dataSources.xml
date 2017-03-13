@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="denim_store_db@localhost" uuid="1aed0da1-588c-4351-a0a2-df0369ebfe15">
+    <data-source source="LOCAL" name="Denim_Store_DB@denimstoredb.cgq5gut2qhds.us-west-2.rds.amazonaws.com" uuid="73e9839b-271b-46de-953e-70e2b6d1d50d">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/denim_store_db</jdbc-url>
+      <jdbc-url>jdbc:mysql://denimstoredb.cgq5gut2qhds.us-west-2.rds.amazonaws.com:3306/Denim_Store_DB</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />

@@ -3,7 +3,7 @@ package com.test.controller;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
-import com.test.model.Templatecollectionentity;
+import com.test.model.TemplateCollectionEntity;
 import org.apache.http.HttpHost;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
@@ -191,9 +191,9 @@ public class HomeController {
         Session test = sessionFact.openSession();
 
         test.beginTransaction();
-        Criteria c = test.createCriteria(Templatecollectionentity.class);
+        Criteria c = test.createCriteria(TemplateCollectionEntity.class);
 
-        ArrayList<Templatecollectionentity> templatelist = (ArrayList<Templatecollectionentity>) c.list();
+        ArrayList<TemplateCollectionEntity> templatelist = (ArrayList<TemplateCollectionEntity>) c.list();
         model.addAttribute("list",  templatelist.get(0).getTemplateId());
         model.addAttribute("list1", templatelist.get(0).getUserId());
 
