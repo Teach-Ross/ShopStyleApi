@@ -12,11 +12,18 @@
 </head>
 <body>
 <form action="result">
-<button type="submit" formaction ="result" name="id" value="${id1}"><img src="${image1}" alt="jeans1"></button>
-<button type="submit" formaction ="result" name="id" value="${id2}"><img src="${image2}" alt="jeans2"></button>
-<button type="submit" formaction ="result" name="id" value="${id3}"><img src="${image3}" alt="jeans3"></button>
+
+<button type="submit" name="id" value="${id1}" value="image1"><img src="${image1}" alt="jeans1"></button>
+<button type="submit" name="id" value="${id2}"><img src="${image2}" alt="jeans2"></button>
+<button type="submit" name="id" value="${id3}"><img src="${image3}" alt="jeans3"></button>
 </form>
 
+
+<form action="result2">
+    <input type="image" src="${image1}" alt="Submit" name="image" value="${image1}">
+    <input type="image" src="${image2}" alt="Submit" name="image" value="${image2}">
+    <input type="image" src="${image3}" alt="Submit" name="image" value="${image3}">
+</form>
 
 </body>
 </html>
