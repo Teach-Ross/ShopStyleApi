@@ -23,8 +23,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 
 
@@ -213,11 +211,8 @@ public class HomeController {
 
     @RequestMapping("template")
     public String displayTemplate(Model model){
-        List<JeanStyleEnum> styleList = new ArrayList<JeanStyleEnum>(Arrays.asList(JeanStyleEnum.values()));
 
 
-
-        model.addAttribute("styleList", styleList);
 
         model.addAttribute("list", JeanStyleEnum.values());
 

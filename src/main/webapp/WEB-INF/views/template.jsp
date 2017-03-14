@@ -71,18 +71,12 @@
 
 <select name="style" id="styleList">
     <option selected="${style}" value="">Select Jean Style</option>
-    <c:set var="test1" value="${style}"/>
-    <c:forEach items="${list}" var="option">
-        <c:set var="test2" value="${option}"/>
-        <c:if test="test1 == test2">
-        <option selected="${option}" value="${option}">
-            <c:out value="${option}"></c:out>
-        </option>
-        </c:if>
-        <option value="${option}">
-            <c:out value="${option}"></c:out>
-        </option>
-    </c:forEach>
+    <c:set var="test1" value="${style}"/><c:forEach items="${list}" var="option">
+    <option value="${option}">
+        <c:out value="${option}"></c:out>
+    </option>
+</c:forEach>
+
 </select>
     <input type="submit" value="Submit">
 </form>

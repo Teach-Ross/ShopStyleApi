@@ -78,7 +78,7 @@ public class JeanTemplateMap {
         }
 
         String d = description.toLowerCase();
-        if(d.contains("ankle")|d.contains("crop")|d.contains("capri")){
+        if(d.contains("ankle")|d.contains("crop")|d.contains("capri")|d.contains("cutoff")){
             this.temp.setCropped(true);
             return;
         }
