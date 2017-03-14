@@ -11,52 +11,6 @@
 <html>
 <head>
     <title>Title</title>
-    <style>
-        /* Dropdown Button */
-        .dropbtn {
-            background-color: #4CAF50;
-            color: white;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
-            cursor: pointer;
-        }
-
-        /* Dropdown button on hover & focus */
-        .dropbtn:hover, .dropbtn:focus {
-            background-color: #3e8e41;
-        }
-
-        /* The container <div> - needed to position the dropdown content */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        /* Dropdown Content (Hidden by Default) */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        /* Links inside the dropdown */
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        /* Change color of dropdown links on hover */
-        .dropdown-content a:hover {background-color: #f1f1f1}
-
-        /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-        .show {display:block;}
-    </style>
 
 </head>
 <body>
@@ -94,7 +48,11 @@ ${colorName0}
 ${categoryName0}
 
 
+<script src="jscolor.js"></script>
+<p>Select Fabric Swatch:
+    <input class="jscolor {onFineChange:'update(this)'}" value="cc66ff">
 
+<p id="rect" style="border:1px solid gray; width:161px; height:100px;">
 
 
 
@@ -107,6 +65,13 @@ ${categoryName0}
 
 
 </body>
+<script src="jscolor.js"></script>
+<script>
+    function update(jscolor) {
+        // 'jscolor' instance can be used as a string
+        document.getElementById('rect').style.backgroundColor = '#' + jscolor
+    }
+</script>
 <script>
 
     var e = document.getElementById("styleList");
