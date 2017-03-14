@@ -182,32 +182,6 @@ public class HomeController {
         return "result2";
     }
 
-    @RequestMapping("db")
-    public String dbTest(Model model){
-        Configuration cfg = new Configuration().configure("hibernate.cfg.xml");
-
-        SessionFactory sessionFact = cfg.buildSessionFactory();
-
-        Session test = sessionFact.openSession();
-
-        test.beginTransaction();
-        Criteria c = test.createCriteria(TemplateCollectionEntity.class);
-
-        ArrayList<TemplateCollectionEntity> templatelist = (ArrayList<TemplateCollectionEntity>) c.list();
-        model.addAttribute("list",  templatelist.get(0).getTemplateId());
-        model.addAttribute("list1", templatelist.get(0).getUserId());
-
-
-
-
-
-
-
-
-        return "db";
-
-    }
-
     @RequestMapping("template")
     public String displayTemplate(Model model){
 
