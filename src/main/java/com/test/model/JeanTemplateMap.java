@@ -16,30 +16,30 @@ public class JeanTemplateMap {
 
     private void setStyle(String description, String category){
 
-       //matches category against JeanStyle Enum directly
-        for(JeanStyle style: JeanStyle.values()){
+       //matches category against JeanStyleEnum Enum directly
+        for(JeanStyleEnum style: JeanStyleEnum.values()){
             if(style.toString().contains(category)){
                 this.temp.setStyle(style);
                 return;
             }
         }
 
-        //matches for keywords in description to find JeanStyle
+        //matches for keywords in description to find JeanStyleEnum
         String d = description.toLowerCase();
         if(d.contains("skinny") | d.contains("leggings")){
-            this.temp.setStyle(JeanStyle.SKINNY);
+            this.temp.setStyle(JeanStyleEnum.SKINNY);
             return;
         }else if(category.contains("Classic")| d.contains("straight")){
-            this.temp.setStyle(JeanStyle.STRAIGHT);
+            this.temp.setStyle(JeanStyleEnum.STRAIGHT);
         }
         else if(d.contains("relaxed")){
-            this.temp.setStyle(JeanStyle.RELAXED);
+            this.temp.setStyle(JeanStyleEnum.RELAXED);
             return;
         }else if(d.contains("flare")){
-            this.temp.setStyle(JeanStyle.FLARE);
+            this.temp.setStyle(JeanStyleEnum.FLARE);
             return;
         }else if(d.contains("bootcut")){
-            this.temp.setStyle(JeanStyle.BOOTCUT);
+            this.temp.setStyle(JeanStyleEnum.BOOTCUT);
             return;
         }
 

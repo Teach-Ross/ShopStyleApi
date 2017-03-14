@@ -1,11 +1,8 @@
 package com.test.model;
 
-public enum JeanStyle {
+public enum JeanStyleEnum {
         BOOTCUT, FLARE, RELAXED, SKINNY, STRAIGHT;
 
-        /**
-         * This method will return a string that represents the enum
-         */
         @Override
         public String toString() {
             switch (this) {

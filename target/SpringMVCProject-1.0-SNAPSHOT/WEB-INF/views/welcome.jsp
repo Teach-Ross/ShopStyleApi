@@ -11,9 +11,9 @@
     <title>Title</title>
 </head>
 <body>
-<form action="result">
+<form action="template2">
 
-<button type="submit" name="id" value="${id1}" value="image1"><img src="${image1}" alt="jeans1"></button>
+<button type="submit" name="id" value="${id1}"><img src="${image1}" alt="jeans1"></button>
 <button type="submit" name="id" value="${id2}"><img src="${image2}" alt="jeans2"></button>
 <button type="submit" name="id" value="${id3}"><img src="${image3}" alt="jeans3"></button>
 </form>

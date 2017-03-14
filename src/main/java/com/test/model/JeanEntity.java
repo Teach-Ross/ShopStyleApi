@@ -2,7 +2,7 @@ package com.test.model;
 
 public class JeanEntity {
     private String templateId;
-    private JeanStyle style;
+    private JeanStyleEnum style;
     private Boolean distressed;
     private Boolean cropped;
     private int waistSize;
@@ -12,7 +12,7 @@ public class JeanEntity {
     public JeanEntity() {
     }
 
-    public JeanEntity(JeanStyle style, Boolean distressed, Boolean cropped, int waistSize, int inseamSize, String htmlColor) {
+    public JeanEntity(JeanStyleEnum style, Boolean distressed, Boolean cropped, int waistSize, int inseamSize, String htmlColor) {
         this.style = style;
         this.distressed = distressed;
         this.cropped = cropped;
@@ -21,11 +21,11 @@ public class JeanEntity {
         this.htmlColor = htmlColor;
     }
 
-    public JeanStyle getStyle() {
+    public JeanStyleEnum getStyle() {
         return style;
     }
 
-    public void setStyle(JeanStyle style) {
+    public void setStyle(JeanStyleEnum style) {
         this.style = style;
     }
 
