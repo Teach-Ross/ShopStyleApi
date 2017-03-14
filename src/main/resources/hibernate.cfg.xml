@@ -8,11 +8,11 @@
     <property name="hibernate.connection.url">jdbc:mysql://denimstoredb.cgq5gut2qhds.us-west-2.rds.amazonaws.com:3306/Denim_Store_DB</property>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="show_sql">true</property>
-    <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">jeans</property>
-    <mapping class="com.test.model.TemplateCollectionEntity"/>
-    <mapping resource="TemplateCollectionEntity.hbm.xml"/>
-    <!-- <property name="connection.username"/> -->
+      <mapping resource="JeanTemplateEntity.hbm.xml"/>
+      <mapping class="com.test.model.JeanTemplateEntity"/>
+      <mapping resource="UserEntity.hbm.xml"/>
+      <mapping class="com.test.model.UserEntity"/>
+      <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 
     <!-- DB schema will be updated if needed -->
